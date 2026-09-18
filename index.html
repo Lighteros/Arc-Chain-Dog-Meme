@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arc Chain Dog | $BIRDIE</title>
+  <meta name="description" content="Arc Chain Dog ($BIRDIE) is the Arc team schnoodle and launch copilot. Live on Arc. Swap on Uniswap. Chart on DexScreener." />
+  <meta property="og:title" content="Arc Chain Dog | $BIRDIE" />
+  <meta property="og:description" content="Arc team schnoodle. Launch copilot. Live on Arc chain." />
+  <meta property="og:image" content="logo.png" />
+  <meta name="theme-color" content="#04101c" />
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Sora:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="cursor-bloom" id="cursor-bloom" aria-hidden="true"></div>
+  <canvas id="night-field" aria-hidden="true"></canvas>
+
+  <div class="atmosphere" aria-hidden="true">
+    <div class="bandana-rail">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="pool-caustic"></div>
+    <div class="pool-caustic alt"></div>
+    <svg class="arc-mark" viewBox="0 0 800 520" fill="none">
+      <path d="M90 430 C90 150 710 150 710 430" stroke="url(#arcIce)" stroke-width="34" stroke-linecap="round" />
+      <path d="M90 430 C90 150 710 150 710 430" stroke="url(#arcHot)" stroke-width="8" stroke-linecap="round" />
+      <defs>
+        <linearGradient id="arcIce" x1="90" y1="140" x2="710" y2="430">
+          <stop offset="0%" stop-color="#7ec8ff" stop-opacity="0.08" />
+          <stop offset="50%" stop-color="#f4f8ff" stop-opacity="0.22" />
+          <stop offset="100%" stop-color="#7ec8ff" stop-opacity="0.08" />
+        </linearGradient>
+        <linearGradient id="arcHot" x1="90" y1="140" x2="710" y2="430">
+          <stop offset="0%" stop-color="#4aa7ff" stop-opacity="0" />
+          <stop offset="50%" stop-color="#d7ecff" stop-opacity="0.55" />
+          <stop offset="100%" stop-color="#4aa7ff" stop-opacity="0" />
+        </linearGradient>
+      </defs>
+    </svg>
+    <div class="horizon"></div>
+    <div class="grain"></div>
+    <div class="vignette"></div>
+  </div>
+
+  <header class="nav" id="nav">
+    <a class="brand" href="#hero">
+      <span class="brand-photo">
+        <img src="logo.png" alt="Birdie the schnoodle" />
+      </span>
+      <span class="brand-copy">
+        <strong>Arc Chain Dog</strong>
+        <small>$BIRDIE</small>
+      </span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links" id="nav-links">
+      <a href="#about">About</a>
+      <a href="#howtobuy">How to Buy</a>
+      <a href="#chart">Chart</a>
+      <a href="#joinus">Join Us</a>
+    </nav>
+    <div class="nav-tools">
+      <a class="icon-btn" href="https://x.com/ArcBirdie" target="_blank" rel="noopener noreferrer" aria-label="Birdie on X">
+        <img src="icons/x.svg" alt="" />
+      </a>
+      <a class="icon-btn" href="https://dexscreener.com/arc/0xb725f2f3e5606c62aa25623e5c1fdf3d4b1e5f6e35c6499a20e5ffa9e27439d9" target="_blank" rel="noopener noreferrer" aria-label="DexScreener Arc chart">
+        <img src="icons/dexscreener.svg" alt="" />
+      </a>
+      <a class="icon-btn" href="https://explorer.arc.io/address/0x5e613a6578b531F99A5E39e2dC127b485B57d588" target="_blank" rel="noopener noreferrer" aria-label="Arc explorer">
+        <img src="icons/blockscout.svg" alt="" />
+      </a>
+      <a class="buy-btn" href="https://app.uniswap.org/swap?chain=arc&outputCurrency=0x5e613a6578b531F99A5E39e2dC127b485B57d588" target="_blank" rel="noopener noreferrer">
+        <img src="icons/uniswap.svg" alt="" />
+        <span>Buy $BIRDIE</span>
+      </a>
+    </div>
+  </header>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>Arc Chain Dog</span><span>$BIRDIE</span><span>Arc team schnoodle</span><span>launch copilot</span><span>Uniswap on Arc</span><span>DexScreener /arc</span>
+      <span>Arc Chain Dog</span><span>$BIRDIE</span><span>Arc team schnoodle</span><span>launch copilot</span><span>Uniswap on Arc</span><span>DexScreener /arc</span>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-stage reveal">
+        <div class="runway">
+          <span class="paw p1"></span>
+          <span class="paw p2"></span>
+          <span class="paw p3"></span>
+          <span class="paw p4"></span>
+        </div>
+        <figure class="walker">
+          <img src="logo.png" alt="Birdie walking on the lawn" />
+        </figure>
+        <div class="hud-chip left">
+          <em>MASCOT</em>
+          <strong>SCHNOODLE</strong>
+        </div>
+        <div class="hud-chip right">
+          <em>NETWORK</em>
+          <strong>ARC 5042</strong>
+        </div>
+      </div>
+
+      <div class="hero-copy reveal delay-1">
+        <p class="kicker">
+          <span class="pulse-dot"></span>
+          Live on Arc Chain
+        </p>
+        <h1>
+          <span class="chrome">Birdie</span>
+        </h1>
+        <p class="nameplate">Arc Chain Dog</p>
+        <p class="tag">Arc team schnoodle <span>/</span> launch copilot</p>
+        <p class="lede">
+          A cream wire-coat walking the lawn like the launch already cleared.
+          Bandana on. Tail up. The copilot for Circle's Arc.
+        </p>
+        <div class="hero-actions">
+          <a class="buy-btn solid" href="https://app.uniswap.org/swap?chain=arc&outputCurrency=0x5e613a6578b531F99A5E39e2dC127b485B57d588" target="_blank" rel="noopener noreferrer">
+            <img src="icons/uniswap.svg" alt="" />
+            <span>Swap on Uniswap</span>
+          </a>
+          <a class="ghost-btn" href="https://dexscreener.com/arc/0xb725f2f3e5606c62aa25623e5c1fdf3d4b1e5f6e35c6499a20e5ffa9e27439d9" target="_blank" rel="noopener noreferrer">
+            <img src="icons/dexscreener.svg" alt="" />
+            <span>Arc Chart</span>
+          </a>
+        </div>
+        <button class="ca-chip" type="button" data-copy="0x5e613a6578b531F99A5E39e2dC127b485B57d588" aria-label="Copy contract address">
+          <span class="ca-label">CA</span>
+          <code id="ca-value">0x5e613a65…857d588</code>
+          <span class="ca-status" id="ca-status">Copy</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="section-head reveal">
+        <p class="kicker">About</p>
+        <h2>The schnoodle who sits right-seat on Arc.</h2>
+      </div>
+      <div class="about-layout">
+        <figure class="about-photo reveal">
+          <img src="logo.png" alt="Birdie, cream schnoodle with a red white and blue bandana" />
+          <figcaption>Wire coat. Soft ears. Official walking posture.</figcaption>
+        </figure>
+        <div class="about-copy reveal delay-1">
+          <blockquote>
+            Her name is Birdie and she is a schnoodle.
+          </blockquote>
+          <p>
+            $BIRDIE is Arc Chain Dog: the Arc team's cream schnoodle and the launch copilot
+            for a chain that settles fees in USDC. She is not a cartoon overlay.
+            She is a real lawn-and-pool portrait dropped into a navy glow the same
+            way Arc dropped a clean L1 into the market.
+          </p>
+          <p>
+            The bandana is the only extra hardware. Red, white, and navy against
+            a pale coat. The rest of the thesis is posture: head level, tail high,
+            already mid-stride when the lights come up.
+          </p>
+          <div class="dossier">
+            <article>
+              <span>01</span>
+              <h3>Breed brief</h3>
+              <p>Schnauzer crossed with poodle. Cream wire, dark eye, quiet confidence.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Desk role</h3>
+              <p>Launch copilot. Keeps the room calm while Arc mainnet does the work.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Venue</h3>
+              <p>Arc chain 5042. Uniswap for the swap. DexScreener /arc for the tape.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="howtobuy" id="howtobuy">
+      <div class="section-head reveal">
+        <p class="kicker">How to Buy</p>
+        <h2>Copilot checklist for $BIRDIE.</h2>
+      </div>
+      <ol class="sequence">
+        <li class="seq reveal">
+          <div class="seq-top">
+            <span class="tminus">T-4</span>
+            <span class="seq-fill"></span>
+          </div>
+          <h3>Seat the wallet on Arc</h3>
+          <p>Add Arc mainnet. Chain ID 5042. RPC at rpc.mainnet.arc.io. Explorer at explorer.arc.io. Gas is USDC.</p>
+          <button class="ghost-btn slim" type="button" id="add-arc">Add Arc Network</button>
+        </li>
+        <li class="seq reveal delay-1">
+          <div class="seq-top">
+            <span class="tminus">T-3</span>
+            <span class="seq-fill"></span>
+          </div>
+          <h3>Load USDC</h3>
+          <p>Bridge or receive USDC on Arc. The same balance pays the swap and the network fee. No side gas token.</p>
+        </li>
+        <li class="seq reveal delay-2">
+          <div class="seq-top">
+            <span class="tminus">T-2</span>
+            <span class="seq-fill"></span>
+          </div>
+          <h3>Swap on Uniswap</h3>
+          <p>Open Uniswap on Arc, paste the $BIRDIE contract, and confirm the pair before you sign.</p>
+          <a class="text-link" href="https://app.uniswap.org/swap?chain=arc&outputCurrency=0x5e613a6578b531F99A5E39e2dC127b485B57d588" target="_blank" rel="noopener noreferrer">
+            <img src="icons/uniswap.svg" alt="" />
+            app.uniswap.org
+          </a>
+        </li>
+        <li class="seq reveal delay-3">
+          <div class="seq-top">
+            <span class="tminus">T-1</span>
+            <span class="seq-fill"></span>
+          </div>
+          <h3>Read the Arc tape</h3>
+          <p>This site embeds DexScreener on Arc only. Confirm the path is /arc before you size anything.</p>
+          <a class="text-link" href="https://dexscreener.com/arc/0xb725f2f3e5606c62aa25623e5c1fdf3d4b1e5f6e35c6499a20e5ffa9e27439d9" target="_blank" rel="noopener noreferrer">
+            <img src="icons/dexscreener.svg" alt="" />
+            dexscreener.com/arc
+          </a>
+        </li>
+      </ol>
+    </section>
+
+    <section class="chart" id="chart">
+      <div class="section-head reveal">
+        <p class="kicker">Chart</p>
+        <h2>DexScreener embed, Arc only.</h2>
+        <a class="text-link" href="https://dexscreener.com/arc/0xb725f2f3e5606c62aa25623e5c1fdf3d4b1e5f6e35c6499a20e5ffa9e27439d9" target="_blank" rel="noopener noreferrer">
+          <img src="icons/dexscreener.svg" alt="" />
+          Open $BIRDIE on DexScreener
+        </a>
+      </div>
+      <div class="telemetry reveal">
+        <div class="telemetry-bar">
+          <span>ARC</span>
+          <span>$BIRDIE</span>
+          <span>UNISWAP V4</span>
+          <span>USDC</span>
+          <span>DEXSCREENER</span>
+        </div>
+        <iframe
+          title="DexScreener Arc chart for Birdie"
+          src="https://dexscreener.com/arc/0xb725f2f3e5606c62aa25623e5c1fdf3d4b1e5f6e35c6499a20e5ffa9e27439d9?embed=1&theme=dark&info=0&trades=0"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </section>
+
+    <section class="joinus" id="joinus">
+      <div class="section-head reveal">
+        <p class="kicker">Join Us</p>
+        <h2>Walk the lawn with the copilot.</h2>
+      </div>
+      <figure class="join-banner reveal">
+        <img src="banner.png" alt="Birdie Arc Chain Dog campaign banner" />
+        <div class="banner-sheen" aria-hidden="true"></div>
+      </figure>
+      <div class="join-panel reveal delay-1">
+        <p>
+          Notices, stills, and the occasional mid-stride update land at @ArcBirdie.
+          The sheet above is the only banner on this site, held at a 3:1 frame:
+          chrome name, glowing Arc, one schnoodle on the dark floor.
+        </p>
+        <div class="join-row">
+          <a class="buy-btn solid" href="https://x.com/ArcBirdie" target="_blank" rel="noopener noreferrer">
+            <img src="icons/x.svg" alt="" />
+            <span>Follow @ArcBirdie</span>
+          </a>
+          <a class="ghost-btn" href="https://app.uniswap.org/swap?chain=arc&outputCurrency=0x5e613a6578b531F99A5E39e2dC127b485B57d588" target="_blank" rel="noopener noreferrer">
+            <img src="icons/uniswap.svg" alt="" />
+            <span>Uniswap</span>
+          </a>
+          <a class="ghost-btn" href="https://dexscreener.com/arc/0xb725f2f3e5606c62aa25623e5c1fdf3d4b1e5f6e35c6499a20e5ffa9e27439d9" target="_blank" rel="noopener noreferrer">
+            <img src="icons/dexscreener.svg" alt="" />
+            <span>DexScreener</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <a class="brand" href="#hero">
+      <span class="brand-photo">
+        <img src="logo.png" alt="" />
+      </span>
+      <span class="brand-copy">
+        <strong>Arc Chain Dog</strong>
+        <small>$BIRDIE on Arc</small>
+      </span>
+    </a>
+    <p>Arc team schnoodle. Launch copilot.</p>
+    <div class="foot-links">
+      <a href="https://x.com/ArcBirdie" target="_blank" rel="noopener noreferrer">
+        <img src="icons/x.svg" alt="" /> X
+      </a>
+      <a href="https://dexscreener.com/arc/0xb725f2f3e5606c62aa25623e5c1fdf3d4b1e5f6e35c6499a20e5ffa9e27439d9" target="_blank" rel="noopener noreferrer">
+        <img src="icons/dexscreener.svg" alt="" /> DexScreener
+      </a>
+      <a href="https://app.uniswap.org/swap?chain=arc&outputCurrency=0x5e613a6578b531F99A5E39e2dC127b485B57d588" target="_blank" rel="noopener noreferrer">
+        <img src="icons/uniswap.svg" alt="" /> Uniswap
+      </a>
+      <a href="https://explorer.arc.io/address/0x5e613a6578b531F99A5E39e2dC127b485B57d588" target="_blank" rel="noopener noreferrer">
+        <img src="icons/blockscout.svg" alt="" /> Explorer
+      </a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
