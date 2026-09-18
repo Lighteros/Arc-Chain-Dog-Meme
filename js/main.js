@@ -9,7 +9,7 @@
   const banner = document.querySelector(".join-banner");
   const magnetTargets = document.querySelectorAll(".buy-btn, .ghost-btn, .icon-btn");
 
-  const CA = "0x5e613a6578b531F99A5E39e2dC127b485B57d588";
+  const CA = "0x70d650c32ba334338470805956a1bef7476bee0a";
   const BUY = "https://app.uniswap.org/swap?chain=arc&outputCurrency=" + CA;
 
   navToggle.addEventListener("click", () => {
